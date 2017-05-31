@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SGF - Sistema de Gestão de Fornecedores - Login</title>
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/toastr/toastr.min.css" />
+	<link rel="stylesheet" href="css/jquery/jquery-ui.css" />
+	<link rel="stylesheet" href="./bower_components/select2/dist/css/select2.min.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>    
+    
+    <aside class="sgf-sidebar displayNone">
+        
+        <div class="sgf-sidebar__bar">
+            
+            <div class="sgf-sidebar__header alignCenter padding10px">
+                
+                <a href="/Home" class="btn-Home">
+                    <img src="images/logo_sas.png">
+                </a>
+
+                 <a href="#" class="pull-right sgf-sidebar__close">
+                     <i class="fa fa-times "></i>
+                 </a>
+            </div>
+
+            <ul class="sgf-sidebar__menu clearfix">
+                
+                <li class="sgf-sidebar__menuItem">
+                    
+                    <a href="#" class="sgf-menu__link">
+                        Cadastro <i class="fa fa-angle-down sgf-menu__menuIcon"></i> 
+                    </a>
+                            
+                    <ul class="sgf-menu__list">
+                        <li>
+                            <a href="#">Solicitação</a>
+                        </li>
+                        <li><a href="#">Prestação de Contas</a></li>
+                        <li><a href="#">Autorização</a></li>
+                    </ul>   
+                        
+                </li>
+
+                <li class="sgf-sidebar__menuItem">
+                    <!-- Card Component -->                    
+                    <a href="#" class="sgf-menu__link">
+                        Produtos
+                    </a>                            
+                    <!-- Fim Card Component -->
+                </li>
+
+                <li class="sgf-sidebar__menuItem">
+                    <!-- Card Component -->                   
+
+                    <!-- Header Card Component -->                            
+                    <a href="#" class="sgf-menu__link">
+                        Documentos <i class="fa fa-angle-down sgf-menu__menuIcon"></i> 
+                    </a>                    
+                    
+                    <!-- Footer Card Component -->
+                    <ul class="sgf-menu__list">
+                        <li>
+                            <a href="#">Solicitação</a>
+                        </li>
+                        <li><a href="#">Prestação de Contas</a></li>
+                        <li><a href="#">Autorização</a></li>
+                    </ul>
+                        
+                    <!-- Fim Card Component -->
+                </li>
+
+                <li class="sgf-sidebar__menuItem">                    
+                    <!-- Card Component -->
+                    <a href="#" class="sgf-menu__link">
+                        Parâmetros
+                    </a>                            
+                </li> 
+
+                <li class="sgf-sidebar__menuItem">
+                    <!-- Card Component -->
+                    <a href="#" class="sgf-menu__link">
+                        Segurança
+                    </a>
+                    
+                </li>
+
+                <li class="sgf-sidebar__menuItem">
+                    <!-- Card Component -->
+                    <a href="#" class="sgf-menu__link">
+                       Atendimento SLA
+                    </a>
+                    
+                </li> 
+
+                <li class="sgf-sidebar__menuItem">
+                   
+                    <!-- Card Component -->                   
+                    <a href="#" class="sgf-menu__link">
+                        Tabela de Valores <i class="fa fa-angle-down sgf-menu__menuIcon"></i>
+                    </a>
+
+                    <ul class="sgf-menu__list">
+                        <li>
+                            <a href="#">Identificação</a>
+                        </li>
+                        <li><a href="#">Envelope de Pagamento</a></li>
+                        <li><a href="#">Autorização</a></li>
+                    </ul>   
+                        
+                </li>
+
+                <li class="sgf-sidebar__menuItem">
+                   
+                    <!-- Card Component -->
+                    <a href="#" class="sgf-menu__link">
+                        Credenciamento
+                    </a>
+                            
+                </li> 
+
+                <li class="sgf-sidebar__menuItem">
+                    <!-- Card Component -->
+                    <a href="#" class="sgf-menu__link">
+                        Empresa Credenciada <i class="fa fa-angle-down sgf-menu__menuIcon"></i >
+                    </a>
+                            
+                    <ul class="sgf-menu__list">
+                        <li>
+                            <a href="#">Cadastro dos Tipos de Garantia</a>
+                        </li>
+                        <li><a href="#">Controle da Garantia</a></li>
+                        <li><a href="#">Parâmetros Gerais</a></li>
+                    </ul>                        
+                        
+                </li> 
+
+                <li class="sgf-sidebar__menuItem">
+                    <!-- Card Component -->
+                    <a href="#" class="sgf-menu__link">
+                        Contratação <i class="fa fa-angle-down sgf-menu__menuIcon"></i >
+                    </a>
+                            
+                    <ul class="sgf-menu__list">
+                        <li>
+                            <a href="#">Cadastro dos Tipos de Garantia</a>
+                        </li>
+                        <li><a href="#">Controle da Garantia</a></li>
+                        <li><a href="#">Parâmetros Gerais</a></li>
+                    </ul>                        
+                        
+                </li> 
+
+
+            </ul>
+        </div>   
+
+        <div class="sgf-sidebar__overlay"></div>
+    </aside>
+
+	
+    <div class="sgf-main">
+
+    	<header id="sgf-header" class="navbar navbar-fixed-top">
+
+            <div class="container-fluid expanded-panel headerTop alignCenter">
+                <!--<div class="row-fluid">-->
+                    
+                    <!--<div id="logo" class="col-xs-5 col-sm-2">-->
+                        
+                        <ul class="sgf-header__list nav navbar-nav pull-left panel-menu">
+                            <li class="">
+                                <a href="#" class="sgf-expand__menu sgf-header__listAnchor">
+                                    <i class="fa fa-bars font18px colorWhite sgf-header__listIcon menu-icon"></i>
+
+                                    <span class="hidden-xs font16px">Menu</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <a href="./index.html" class="btn-Home sgf-header__logo">
+                            <img src="images/logo_sas.png">
+                        </a>
+
+                        <ul class="sgf-header__list nav navbar-nav pull-right panel-menu">
+                                        
+                            <li class="sgf-header__box hidden-xs box-unidade-ativa">
+                                <span id="spnUnidade">Unidade: </span>
+                                <span>Ambiente de acesso: Sebrae-NA</span>
+                            </li>
+
+                            <li class="dropdown alignLeft" id="liDropDown">
+                                
+                                <a href="#" class="sgf-header__listAnchor dropdown-toggle account " data-toggle="dropdown">
+                                    
+                                    <i class="fa fa-user sgf-header__listIcon pull-right visible-xs"></i>
+                                    
+                                    <div class="sgf-header__box user-mini pull-right marginTop8px hidden-xs">
+                                        <span class="welcome">Bem vinda,</span>
+                                        <span>ALEXSANDRA DE OLIVEIRA BRAGA</span>
+                                        <input id="hdnUsuarioLogadoParceiro" name="hdnUsuarioLogadoParceiro" type="hidden" value="373410744">
+                                    </div>
+                                </a>
+
+                                <ul class="sgf-header__dropdown dropdown-menu menuUsuario" style="display: none;">
+                                    <li>
+                                        <a href="javascript:AbrirModal();" class="ajax-link">
+                                            <i class="fa fa-gear sgf-header__listIcon"></i>
+                                            <span>Minhas Configurações</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/Login/Sair" style="cursor: pointer;" id="lnkSair">
+                                            <i class="fa fa-sign-out"></i>
+                                            <span>Sair</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>                    
+                
+            </div>            
+
+            <div class="breadcrumb">
+                <a href="./cadastro.html">Dashboard</a> &gt; <a href="#">Cadastro de Subárea</a>
+            </div>          
+            
+        </header> 
+
+        <div class="sgf-header__information ">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="sgf__message">
+                            <div class="sgf--warn clearfix">
+                                <i class="fa fa-info-circle floatLeft marginTop3px"></i>
+                                <a class="sgf__message--close floatRight" href="#">
+                                    <i class="fa fa-close  marginTop3px"></i>
+                                </a>
+                                
+                                <span class="floatLeft marginLeft10px textOverflowEllipsis sgf__message--signInfo">Cópia da base de produção em 12/05/2017</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+       
+        <div class="wrapper">
+            
+            <div class="sgf_wrapper">
+                
+                <div class="container-fluid">
+
+                    <div class="row-fluid clearfix">
+
+                        <div class="col-sm-12 col-xs-12">
+                            <div class="sgf__box">
+                                
+                                <div class="sgf__box--title">
+                                    <div class="holder clearfix">
+                                        <i class="fa fa-edit"></i> Cadastro de Sub Área
+                                        
+                                        <div class="sgf__box--options floatRight hidden-xs font12px">
+                                            
+                                            <a href="./cadastroArea.html" class="addSubArea marginRight10px"><i class="fa fa-plus "></i><span> Incluir Área</span></a>
+                                            
+                                        </div>
+                                    </div> 
+                                </div>
+
+                                <div class="sgf__box--content clearfix">
+                                    
+                                     <form class="sgf__form searchArea form-inline" action="#">
+                                        
+                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                            
+                                            <label class="width100percent" for="area">Informe a Área de Conhecimento</label>
+
+                                            <input class="width100percent form-control sgf__select2" name="nameArea" id="nameArea" type="text" placeholder="Entre com o nome da Sub Área de Conhecimento" /> 
+                                            
+                                        </div>
+
+                                        <div class="form-group col-md-12 col-sm-12 col-xs-12 marginTop10px">
+                                            
+                                            <label class="width100percent" for="area">Nome da Sub Área</label>
+
+                                            <input class="width100percent form-control " name="nameSubArea" id="subarea" type="text" placeholder="Entre com o nome da Sub Área de Conhecimento, caracteres de A-Z serão permitidos" /> 
+                                            
+                                        </div>
+                                        
+
+                                        <div class="form-group col-md-12 col-sm-12 col-xs-12 marginTop10px">
+                                            
+                                            <label class="width100percent">Status</label>
+                                            
+                                            <label class="fontNormal">
+                                                <input type="checkbox" value="">
+                                                Ativo
+                                            </label>
+
+                                        </div>
+
+                                        <div class="col-md-12 col-sm-12 col-xs-12  sgf__controls alignRight">
+                                            <button type="submit" class="btn btn-default sgf__btn sgf__btn--confirm">
+                                                Salvar e Continuar <i class="fa fa-save"></i>
+                                            </button>
+
+                                            <button type="submit" class="btn btn-default sgf__btn btn-info">
+                                                Salvar e Voltar <i class="fa fa-save"></i>
+                                            </button>
+
+                                            <a class="btn btn-danger sgf__btn" href="./cadastroArea.html">
+                                                <i class="fa fa-undo"></i> Voltar 
+                                            </a>
+                                        </div>
+
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    
+    
+    <footer class="sgf__footerControl visible-xs"> 
+       <div class="holder">
+            <ul class="sgf__footerTabList">
+                
+                <li>
+                    <a class="sgf__footerTabList--link" href="./cadastroArea.html">
+                        <i class="fa fa-plus"></i>
+                        <span>
+                            Incluir Área
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sgf__footerTabList--link" href="./cadastroSubArea.html">
+                        <i class="fa fa-plus"></i>
+                        <span>
+                            Incluir Sub Área
+                        </span>
+                    </a>
+                </li>
+            </ul>        
+        </div>
+    </footer>
+
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="./bower_components/select2/dist/js/select2.full.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

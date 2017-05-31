@@ -1,0 +1,59 @@
+/* 
+	=Login 
+
+	Login Component
+*/
+.loginBackground{
+  
+  background-color: #eee;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  
+  .login{
+    
+    background-color: transparent;
+    border: none;   
+    left: 50%;
+    position: absolute;
+    top: 50%;
+
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen 
+    and (min-device-width : 320px) 
+    and (max-device-width : 480px) {
+      /* Styles */
+      height: 315px;
+      margin: -157px 0 0 -160px;
+      width: 320px;
+    }
+
+    @media (min-width: 481px){
+      height: 325px;
+      margin: -175px 0 0 -200px;
+      left: 50vw;
+      position: absolute;
+      width: 400px;
+      top: 50vh;    
+    }
+
+    .panel-heading{
+      background-color: #337ab7;
+      border-radius: 0px;
+      color: #fff;   
+    }
+
+    .panel-body{
+      background-color: #fff;
+    }
+
+    .accessContainer{
+      border-top: 1px solid #fbfbfb;
+      padding-bottom: 15px;
+    }
+
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }  
+}

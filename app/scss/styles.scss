@@ -1,0 +1,37 @@
+@import "_sas";
+@import '_sas_components';
+@import '_shortcuts';
+@import '_variables';
+@import '_helpers';
+
+@import '_sidebar';
+@import '_login';
+@import '_components';
+@import '_card';
+@import '_external';
+
+
+/* =SITE */
+body{
+  font-family: -apple-system, BlinkMacSystemFont,"Segoe UI", "Roboto", "Lato", "Helvetica", "Arial" , sans-serif;
+  font-size: 10px;
+  padding: 0px;
+  padding-top: 85px;
+}
+
+.breadcrumb{
+  //margin-top: 10px;
+  font-size: 1.2rem;
+  margin: 0px;
+}
+
+.table{
+  display: table;
+  margin: 0 auto;
+}
+
+/* =Misc*/
+.primaryBackgroundColor{
+  background-color: $primaryColor;
+}
+

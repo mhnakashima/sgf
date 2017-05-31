@@ -1,0 +1,71 @@
+/* 
+  =Card 
+
+  Styles for card component
+
+*/
+.sgf-card{
+  
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 10px;
+
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;  
+}
+
+.sgf-card--space{
+  margin-top: 20px;
+  min-height: 315px;
+}
+
+.sgf-card__header{
+  
+  color: #fff;
+  font-size: 1.6rem;
+  
+  >a{
+    width: 100%;
+
+    color: #fff;
+  }
+}
+
+.sgf-sidebar__menu{
+  overflow-y: auto;
+}
+
+.sgf-card__content{
+  
+  padding: 30px 0;
+  text-align: center;
+
+  >i{
+    font-size: 6.5rem;
+  }
+}
+
+.sgf-card--footer{
+  >p{
+    font-size: 1.4rem;      
+  }    
+}
+
+.sgf-card__list{
+  list-style: none;
+  padding: 0px;
+
+  li{
+    margin-bottom: 3px;
+    a{
+      color: $cardTextDefaultColor;
+            
+      font-size: 1.4rem;
+      
+      @media #{$desktop}{  
+        padding: 5px 0px; 
+      }
+      width: 100%;      
+    }
+  }
+}

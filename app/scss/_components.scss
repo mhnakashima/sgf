@@ -1,0 +1,320 @@
+/*
+  =Components
+
+  * Positioning
+  * Box Model
+  * Tipografia
+  * Visual
+
+*/
+/* =Main */
+.sgf-main{
+   
+  z-index: 0;
+
+  padding-bottom: 100px;
+
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  
+  #sgf-header{
+  
+    margin: 0px;
+
+    &.navbar{
+      
+      background-color: transparent;    
+      margin: 0px !important;
+
+      .sgf-header__list{
+        .sgf-header__listAnchor{
+          padding: 0px;
+          
+          .sgf-header__listIcon{
+            margin: 8px 0;
+            padding: 5px 9px;
+
+            &.menu-icon{
+              
+              @media #{$desktop}{
+                margin-top: 12px;
+              }
+            } 
+          }
+
+        }
+      }
+
+      .headerTop{
+
+        background-color: #0f70c4;
+        
+        #logo{
+
+        }
+
+        #top-panel{
+          .navbar-nav{
+            margin: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sgf-header__logo{
+  left: 50%;
+  margin: -42px 0 0 -60px;
+  position: absolute;
+  top: 50%;
+}
+
+.sgf-header__list{
+  &.nav{
+    margin: 0px;   
+  }
+
+  >li{
+
+    .dropdown-menu{
+      display: none;
+    }
+
+    &.open{
+      .dropdown-menu{
+        display: block !important;
+      }
+    }
+  }
+}
+
+.sgf-header__listAnchor{
+  padding: 0px;
+
+  &.account{
+    
+    background-color: transparent !important;
+    color: $primaryColor;
+
+    &:focus{
+      background-color: rgba(240,240,240,0.2) !important;
+    }
+  }
+}
+
+.sgf-header__listIcon{
+  padding: 5px 9px;
+}
+
+.sgf-header__box{
+  font-size: 1.4rem;
+  padding: 0 10px;
+}
+
+.sgf-header__dropdown{
+  li{
+    a{
+      padding: 10px !important;
+    }
+  }
+}
+
+
+/* =Table */
+.sgf__table{
+
+  tfoot{
+    display: none;
+  }
+}
+
+.sgf__table--container{
+
+  @media #{$tiny}{
+    overflow-x: auto;
+  }
+}
+
+
+/* =Box Component */
+.sgf__box{
+  
+  display: block;
+  width: 100%;
+
+  font-size: 1.4rem;
+
+  border: 1px solid #eee;
+}
+
+.sgf__box--title{
+  
+  padding: 10px 15px 0;
+
+  color: #333;  
+
+  .holder{
+    
+    padding-bottom: 10px;
+    
+    font-size: 1.6rem;
+
+    border-bottom: 1px solid #ccc;
+
+  }
+}
+
+.sgf__box--content{
+  display: block;
+  width: 100%;
+
+  padding: 15px;
+}
+
+.sgf__box--options{
+  
+  @media #{$desktop}{
+    margin-top: 5px;
+  }
+}
+
+.sgf__label{
+   >label, >select, >input{
+    width: 100%;
+   }
+}
+
+
+/* messages */
+.sgf--warn{
+  @extend .sgf__message;
+  
+  margin: 15px 0;
+  padding: 10px;
+
+  background-color: $sgf-warn;
+
+}
+
+.sgf__message--signInfo{
+  @media #{$tiny}{
+    max-width: 200px;
+  }
+}
+
+/* search */
+
+.sgf__btn{
+  
+  border: none;
+  
+  @media #{$tiny}{
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  @media #{$desktop}{
+    float: right;
+    margin-left: 15px;      
+  }
+}
+
+.sgf__search{
+    
+    @extend .sgf__btn;
+    
+    @media #{$desktop}{
+      margin-top: 15px;      
+    } 
+
+}
+
+.sgf__btn--confirm{
+    color: #fff;
+    
+    background-color: $cardDefaultBackgroundColor;
+}
+
+.btn__cancel{
+  @extend .sgf__btn;   
+}
+
+/* 
+  =Footer Main Control 
+
+  Controle que ficará fixo em smartphones pra mostrar mini botões para agilizar e 
+  facilitar os acessos.
+*/
+
+.sgf__footerControl{
+  
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  z-index: 101;  
+
+  font-size: 10px;
+
+  overflow-x: auto;
+  width: 100%;
+  
+  background-color: $primaryColor;
+
+  .holder{
+    display: table;
+    height: 100%;
+    width: 100%;  
+  }
+  
+}
+
+.sgf__footerTabList{  
+  display: table-row;
+  list-style: none;
+
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  li{
+    
+    position: relative;
+
+    display: table-cell;
+    vertical-align: middle;
+
+    text-align: center;   
+    
+  }
+}
+
+.sgf__footerTabList--link{
+ 
+  display: block;
+  padding: 10px;
+
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  
+  i{
+    font-size: 24px;
+  }
+
+  span{
+    display: block;
+  }
+
+}
+
+/*
+  =Components
+
+  * Positioning
+  * Box Model
+  * Tipografia
+  * Visual
+  * Misc  
+*/

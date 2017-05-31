@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SGF - Sistema de Gestão de Fornecedores - Login</title>
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="loginBackground">
+	
+	<div class="login panel panel-default container">
+      <div class="panel-heading">
+        <h3 class="panel-title">Sistema de Atendimento SEBRAE</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                
+                <label class="">Login</label>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="fa fa-user"></i>
+                    </span>
+                    <input type="text" class="form-control" maxlength="255" name="Usuario" id="Usuario" value="">
+                </div>
+                
+                <label class="control-label marginTop10px">Senha:</label>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="fa fa-lock"></i>
+                    </span>
+                    <input class="form-control" data-val="true" data-val-required="O campo &quot;Senha&quot; deve ser preenchido" id="Senha" name="Senha" type="password">
+                </div>
+                
+                <div class="col-sm-12 col-md-12 padL0 padR0 alignLeft marginTop5px marginBottom10px">
+                    <span class="text-right">
+                        <a href="/Login/RedefinirSenha" class="font12px">Esqueci minha senha</a>
+                    </span>
+                </div>               
+
+            </div>
+        </div>
+
+        <div class="row accessContainer">
+             <div class="col-sm-12 col-md-12 marginTop20px alignCenter ">
+                    
+                    <div>
+                        <input type="submit" id="entrar" name="action:Entrar" value="Acessar" class="btn btn-sm btn-primary btnAcessoSistema width100percent">
+                    </div>
+                    
+                    <div class="marginTop10px">
+                     <a href="http://www.homolog.sas.sebrae.com.br/WindowsAuth/Auth/GetWindowsAuthentication" class="btnAcessoRede width100percent ">Entre com usuário de rede</a>
+                    </div>
+
+                </div>                
+
+                <div class="margT10 box-erros text-center">
+                    <div class="validation-summary-valid" data-valmsg-summary="true">
+                        <ul>
+                            <li style="display:none"></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        
+      </div>
+    </div>
+
+</body>
+</html>

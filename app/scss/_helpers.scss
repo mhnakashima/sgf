@@ -1,0 +1,57 @@
+.font-smooth{
+  text-rendering: optimizeLegibility !important;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  font-smoothing: antialiased !important;
+}
+
+////
+// Image Replacement
+////
+.image-replace{
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: inline-block;
+  background-size: contain;
+}
+
+////
+// Centering elements
+////
+.center-vertical{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.center-horizontal{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clearfix{
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    width: 0;
+  }
+}
+
+.sgf__message{
+  display: block;
+    
+  width: 100%;
+  font-size: 1.2rem;
+}

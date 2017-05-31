@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SGF - Sistema de Gestão de Fornecedores - Login</title>
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/toastr/toastr.min.css" />
+	<link rel="stylesheet" href="css/jquery/jquery-ui.css" />
+	<link rel="stylesheet" href="css/select2/select2.css" />
+	<link rel="stylesheet" href="css/styles.min.css" />
+</head>
+
+<body>    
+    
+    <aside class="sgf-sidebar displayNone">
+        
+        <div class="sgf-sidebar__bar">
+            
+            <div class="sgf-sidebar__header alignCenter padding10px">
+                
+                <a href="./index.html" class="btn-Home">
+                    <img src="images/logo_sas.png">
+                </a>
+
+                 <a href="#" class="pull-right sgf-sidebar__close">
+                     <i class="fa fa-times "></i>
+                 </a>
+            </div>
+
+            <ul class="sgf-sidebar__menu clearfix">
+                
+                <li class="sgf-sidebar__menuItem">
+                    
+                    <a class="sgf-menu__link" href="./cadastro.html" >
+                        Área de Conhecimento <i class="fa fa-angle-down sgf-menu__menuIcon"></i> 
+                    </a>
+                            
+                    <ul class="sgf-menu__list">
+                        <li>
+                            <a href="#">Solicitação</a>
+                        </li>
+                        <li><a href="#">Prestação de Contas</a></li>
+                        <li><a href="#">Autorização</a></li>
+                    </ul>   
+                        
+                </li>
+
+                <li class="sgf-sidebar__menuItem">
+                    <!-- Card Component -->                    
+                    <a href="#" class="sgf-menu__link">
+                        Produtos
+                    </a>                            
+                    <!-- Fim Card Component -->
+                </li>
+
+                <li class="sgf-sidebar__menuItem">
+                    <!-- Card Component -->                   
+
+                    <!-- Header Card Component -->                            
+                    <a href="#" class="sgf-menu__link">
+                        Documentos <i class="fa fa-angle-down sgf-menu__menuIcon"></i> 
+                    </a>                    
+                    
+                    <!-- Footer Card Component -->
+                    <ul class="sgf-menu__list">
+                        <li>
+                            <a href="#">Solicitação</a>
+                        </li>
+                        <li><a href="#">Prestação de Contas</a></li>
+                        <li><a href="#">Autorização</a></li>
+                    </ul>
+                        
+                    <!-- Fim Card Component -->
+                </li>
+
+                <li class="sgf-sidebar__menuItem">                    
+                    <!-- Card Component -->
+                    <a href="#" class="sgf-menu__link">
+                        Parâmetros
+                    </a>                            
+                </li> 
+
+                <li class="sgf-sidebar__menuItem">
+                    <!-- Card Component -->
+                    <a href="#" class="sgf-menu__link">
+                        Segurança
+                    </a>
+                    
+                </li>
+
+                <li class="sgf-sidebar__menuItem">
+                    <!-- Card Component -->
+                    <a href="#" class="sgf-menu__link">
+                       Atendimento SLA
+                    </a>
+                    
+                </li> 
+
+                <li class="sgf-sidebar__menuItem">
+                   
+                    <!-- Card Component -->                   
+                    <a href="#" class="sgf-menu__link">
+                        Tabela de Valores <i class="fa fa-angle-down sgf-menu__menuIcon"></i>
+                    </a>
+
+                    <ul class="sgf-menu__list">
+                        <li>
+                            <a href="#">Identificação</a>
+                        </li>
+                        <li><a href="#">Envelope de Pagamento</a></li>
+                        <li><a href="#">Autorização</a></li>
+                    </ul>   
+                        
+                </li>
+
+                <li class="sgf-sidebar__menuItem">
+                   
+                    <!-- Card Component -->
+                    <a href="#" class="sgf-menu__link">
+                        Credenciamento
+                    </a>
+                            
+                </li> 
+
+                <li class="sgf-sidebar__menuItem">
+                    <!-- Card Component -->
+                    <a href="#" class="sgf-menu__link">
+                        Empresa Credenciada <i class="fa fa-angle-down sgf-menu__menuIcon"></i >
+                    </a>
+                            
+                    <ul class="sgf-menu__list">
+                        <li>
+                            <a href="#">Cadastro dos Tipos de Garantia</a>
+                        </li>
+                        <li><a href="#">Controle da Garantia</a></li>
+                        <li><a href="#">Parâmetros Gerais</a></li>
+                    </ul>                        
+                        
+                </li> 
+
+                <li class="sgf-sidebar__menuItem">
+                    <!-- Card Component -->
+                    <a href="#" class="sgf-menu__link">
+                        Contratação <i class="fa fa-angle-down sgf-menu__menuIcon"></i >
+                    </a>
+                            
+                    <ul class="sgf-menu__list">
+                        <li>
+                            <a href="#">Cadastro dos Tipos de Garantia</a>
+                        </li>
+                        <li><a href="#">Controle da Garantia</a></li>
+                        <li><a href="#">Parâmetros Gerais</a></li>
+                    </ul>                        
+                        
+                </li> 
+
+
+            </ul>
+        </div>   
+
+        <div class="sgf-sidebar__overlay"></div>
+    </aside>
+
+	
+    <div class="sgf-main">
+
+    	<header id="sgf-header" class="navbar navbar-fixed-top">
+
+            <div class="container-fluid expanded-panel headerTop alignCenter">
+                <!--<div class="row-fluid">-->
+                    
+                    <!--<div id="logo" class="col-xs-5 col-sm-2">-->
+                        
+                        <ul class="sgf-header__list nav navbar-nav pull-left panel-menu">
+                            <li class="">
+                                <a href="#" class="sgf-expand__menu sgf-header__listAnchor">
+                                    <i class="fa fa-bars font18px colorWhite sgf-header__listIcon menu-icon"></i>
+
+                                    <span class="hidden-xs font16px">Menu</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <a href="./index.html" class="btn-Home sgf-header__logo">
+                            <img src="images/logo_sas.png">
+                        </a>
+
+                         <ul class="sgf-header__list nav navbar-nav pull-right panel-menu">
+                                        
+                            <li class="sgf-header__box hidden-xs box-unidade-ativa">
+                                <span id="spnUnidade">Unidade: </span>
+                                <span>Ambiente de acesso: Sebrae-NA</span>
+                            </li>
+
+                            <li class="dropdown alignLeft" id="liDropDown">
+                                
+                                <a href="#" class="sgf-header__listAnchor dropdown-toggle account " data-toggle="dropdown">
+                                    
+                                    <i class="fa fa-user sgf-header__listIcon pull-right visible-xs"></i>
+                                    
+                                    <div class="sgf-header__box user-mini pull-right marginTop8px hidden-xs">
+                                        <span class="welcome">Bem vinda,</span>
+                                        <span>ALEXSANDRA DE OLIVEIRA BRAGA</span>
+                                        <input id="hdnUsuarioLogadoParceiro" name="hdnUsuarioLogadoParceiro" type="hidden" value="373410744">
+                                    </div>
+
+                                </a>
+
+                                <ul class="sgf-header__dropdown dropdown-menu menuUsuario" style="display: none;">
+                                    <li>
+                                        <a href="javascript:AbrirModal();" class="ajax-link">
+                                            <i class="fa fa-gear sgf-header__listIcon"></i>
+                                            <span>Minhas Configurações</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Login/Sair" style="cursor: pointer;" id="lnkSair">
+                                            <i class="fa fa-sign-out"></i>
+                                            <span>Sair</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                </li>
+                        </ul>                    
+                
+            </div>            
+
+            <div class="breadcrumb">
+                <a href="#">Dashboard</a>
+            </div>          
+            
+        </header> 
+
+         <div class="sgf-header__information ">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="sgf__message">
+                        <div class="sgf--warn clearfix">
+                            <i class="fa fa-info-circle floatLeft marginTop3px"></i>
+                            <a class="sgf__message--close floatRight" href="#">
+                                <i class="fa fa-close  marginTop3px"></i>
+                            </a>
+                            
+                            <span class="floatLeft marginLeft10px textOverflowEllipsis sgf__message--signInfo">Aviso: Cópia da base de produção em 12/05/2017</span>
+                            
+                        </div>
+                    </div>                                        
+                </div>
+            </div>
+        </div>      
+       
+        <div class="wrapper">
+            
+            <div class="sgf_wrapper">
+                
+                <div class="container-fluid">
+
+                    <div class="row-fluid clearfix">
+                        
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-xl-2">
+                            
+                            <!-- Card Component -->
+                            <div class="sgf-card sgf-card--space primaryBackgroundColor card">
+
+                                <div class="cardWrapper">
+
+                                <!-- Header Card Component -->
+                                <header class="sgf-card__header">
+                                    Área de Conhecimento
+                                </header>
+                                
+                                <!-- Body Card Component -->
+                                <div class="sgf-card__content">
+                                    <i class="fa fa-edit"></i>
+                                </div>
+                                
+                                <!-- Footer Card Component -->
+                                <footer class="sgf-card__footer">
+                                    <p>Gerencie o cadastro por:</p>
+
+                                    <ul class="sgf-card__list">
+                                        <li>
+                                            <a href="./cadastro.html">
+                                                <i class="fa fa-link"></i> Cadastro de Área
+                                            </a>
+                                        </li>
+                                        
+                                    </ul>
+
+                                </footer>
+                                </div>
+                            </div>
+                            <!-- Fim Card Component -->
+
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-xl-2">
+                             <div class="sgf-card  sgf-card--space primaryBackgroundColor card">
+
+                                <div class="cardWrapper">
+
+                                    <!-- Header Card Component -->
+                                    <header class="sgf-card__header">
+                                        Produtos
+                                    </header>
+                                    
+                                    <!-- Body Card Component -->
+                                    <div class="sgf-card__content">
+                                        <i class="fa fa-cubes"></i>
+                                    </div>
+                                    
+                                    <!-- Footer Card Component -->
+                                    <footer class="sgf-card__footer">
+
+                                        <p>
+                                            Gerencie seus produtos por:
+                                        </p>
+                                        
+                                        <ul class="sgf-card__list">
+                                            <li>
+                                                <a href="#"><i class="fa fa-link"></i> Portfólio de Produtos</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-link"></i> Solicitação de Inclusão de Produto</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-link"></i> Aprovação de Solicitação de Produto
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-link"></i> Vinculação de Produto
+                                                </a>
+                                            </li> 
+                                        </ul>
+
+                                    </footer>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-xl-2">
+                             <div class="sgf-card  sgf-card--space primaryBackgroundColor card">
+
+                                <div class="cardWrapper">
+
+                                <!-- Header Card Component -->
+                                <header class="sgf-card__header">
+                                    Documentos
+                                </header>
+                                
+                                <!-- Body Card Component -->
+                                <div class="sgf-card__content">
+                                    <i class="fa fa-file-archive-o"></i>
+                                </div>
+                                
+                                <!-- Footer Card Component -->
+                                <footer class="sgf-card__footer">
+                                    <p>Gerencie seus documentos:</p>
+
+                                    <ul class="sgf-card__list">
+                                        <li>
+                                            <a href="#"><i class="fa fa-link"></i> Documentos</a>
+                                        </li>                                        
+                                    </ul>
+
+                                </footer>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-xl-2">
+                             <div class="sgf-card  sgf-card--space primaryBackgroundColor card">
+
+                                <div class="cardWrapper">
+
+                                <!-- Header Card Component -->
+                                <header class="sgf-card__header">
+                                    Parâmetros
+                                </header>
+                                
+                                <!-- Body Card Component -->
+                                <div class="sgf-card__content">
+                                    <i class="fa fa-gear"></i>
+                                </div>
+                                
+                                <!-- Footer Card Component -->
+                                <footer class="sgf-card__footer">
+                                    <p>Gerencie parâmetros do sistema:</p>
+
+                                    <ul class="sgf-card__list">
+                                        <li>
+                                            <a href="#"><i class="fa fa-link"></i> Parâmetros</a>
+                                        </li>                                        
+                                    </ul>
+
+                                </footer>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-xl-2">
+                        
+                            <!-- Card Component -->
+                            <div class="sgf-card  sgf-card--space primaryBackgroundColor card">
+
+                                <div class="cardWrapper">
+
+                                <!-- Header Card Component -->
+                                <header class="sgf-card__header">
+                                    Segurança
+                                </header>
+                                
+                                <!-- Body Card Component -->
+                                <div class="sgf-card__content">
+                                    <i class="fa fa-lock"></i>
+                                </div>
+                                
+                                <!-- Footer Card Component -->
+                                <footer class="sgf-card__footer">
+                                    <p>Gerencie a segurança por:</p>
+                                    
+                                    <ul class="sgf-card__list">
+                                        <li>
+                                            <a href="#"><i class="fa fa-link"></i> Cadastro de Perfil</a>
+                                        </li> 
+                                        <li>
+                                            <a href="#"><i class="fa fa-link"></i> Cadastro de Usuários</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#"><i class="fa fa-link"></i> Cadastro Senha da Empresa Crendenciada</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#"><i class="fa fa-link"></i> Cadastro Senha da Empresa Candidata</a>
+                                        </li>                                                                               
+                                    </ul>
+
+                                </footer>
+                                </div>
+                            </div>
+                            <!-- Fim Card Component -->
+
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-xl-2">
+                             <div class="sgf-card  sgf-card--space primaryBackgroundColor card">
+
+                                <div class="cardWrapper">
+
+                                <!-- Header Card Component -->
+                                <header class="sgf-card__header">
+                                    Tabela de Valores
+                                </header>
+                                
+                                <!-- Body Card Component -->
+                                <div class="sgf-card__content">
+                                    <i class="fa fa-table"></i>
+                                </div>
+                                
+                                <!-- Footer Card Component -->
+                                <footer class="sgf-card__footer">
+                                    <p>Tabela de valores:</p>
+
+                                    <ul class="sgf-card__list">
+                                        <li>
+                                            <a href="#"><i class="fa fa-link"></i> Tabela Referencial de Valores para Contratação</a>
+                                        </li>
+                                    </ul>
+                                </footer>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-xl-2">
+                             <div class="sgf-card  sgf-card--space primaryBackgroundColor card">
+
+                                <div class="cardWrapper">
+
+                                <!-- Header Card Component -->
+                                <header class="sgf-card__header">
+                                    <a href="#">Credenciamento</a>
+                                </header>
+                                
+                                <!-- Body Card Component -->
+                                <div class="sgf-card__content">
+                                    <i class="fa fa-users"></i>
+                                </div>
+                                
+                                <!-- Footer Card Component -->
+                                <footer class="sgf-card__footer">
+                                    <p>Gerencie os credenciamentos:</p>
+
+                                    <ul class="sgf-card__list">
+                                        <li>
+                                            <a href="#"><i class="fa fa-link"></i> Abertura Edital/Inscrição</a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-link"></i> Empresa Candidata</a></li>
+                                        <li><a href="#"><i class="fa fa-link"></i> Etapa de Habilitação</a></li>
+                                    </ul>
+
+                                </footer>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-xl-2">
+                             <div class="sgf-card  sgf-card--space primaryBackgroundColor card">
+
+                                <div class="cardWrapper">
+
+                                <!-- Header Card Component -->
+                                <header class="sgf-card__header">
+                                    <a href="#">Empresa Credenciada</a>
+                                </header>
+                                
+                                <!-- Body Card Component -->
+                                <div class="sgf-card__content">
+                                    <i class="fa fa-building-o"></i>
+                                </div>
+                                
+                                <!-- Footer Card Component -->
+                                <footer class="sgf-card__footer">
+                                    <p>Gerencie as empresas credenciadas:</p>     
+
+                                    <ul class="sgf-card__list">
+                                        <li>
+                                            <a href="#"><i class="fa fa-link"></i> Dados</a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-link"></i> Classificação da Empresa</a></li>       
+                                    </ul>                             
+
+                                </footer>
+                                </div>
+                            </div>
+                        </div>                   
+                            
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-xl-2">
+                            
+                            <!-- Card Component -->
+                            <div class="sgf-card  sgf-card--space primaryBackgroundColor card">
+
+                                <div class="cardWrapper">
+
+                                <!-- Header Card Component -->
+                                <header class="sgf-card__header">
+                                    <a href="#">Contratação</a>
+                                </header>
+                                
+                                <!-- Body Card Component -->
+                                <div class="sgf-card__content">
+                                    <i class="fa fa-file-text"></i>
+                                </div>
+                                
+                                <!-- Footer Card Component -->
+                                <footer class="sgf-card__footer">
+                                    <p>Gerencie o processo de Contratação:</p>
+
+                                    <ul class="sgf-card__list">
+                                        <li>
+                                            <a href="#"><i class="fa fa-link"></i> Cadastro de Contratação</a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-link"></i> Autorização de Contratação em Outra UF</a></li>
+                                    </ul>
+                                </footer>
+                                </div>
+                            </div>
+                            <!-- Fim Card Component -->
+
+                        </div>                                         
+
+                        </div>
+                            
+                    
+
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+	<!--<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>-->
+    <script src="js/main.min.js"></script>
+</body>
+</html>
