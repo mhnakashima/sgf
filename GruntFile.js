@@ -58,6 +58,19 @@ module.exports = function (grunt) {
 					'app/js/main.min.js' : ['app/js/jquery.min.js', 'app/js/bootstrap.js', 'app/js/main.js']
 				}
 			}
+		},
+		bowercopy: {
+		  options: {
+			srcPrefix: 'app/bower_components'
+		  },
+		  scripts: {
+			options: {
+			  destPrefix: 'app/scripts/vendor'
+			},
+			files: {
+			  'jquery/jquery.min.js': 'jquery/jquery.min.js'
+			}
+		  }
 		}
     });	
 	
@@ -68,10 +81,12 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-concat-css');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-bowercopy');
 	
     // define default task
     grunt.registerTask('default', ['browserSync', 'watch']);
-	grunt.registerTask('minify', ['cssmin', 'uglify']);
+	grunt.registerTask('minify',  ['cssmin', 'uglify']);
+	grunt.registerTask('bower',   ['bowercopy']);
 };
 
 
