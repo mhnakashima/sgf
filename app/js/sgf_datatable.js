@@ -1,50 +1,19 @@
 (function($){
 	$(document).ready(function(){
 
-		var menuOpenItem = $(".sgf-expand__menu");
-		var menuCloseItem = $(".sgf-sidebar__close");
-
-		var sidebar = $(".sgf-sidebar");
-		var area = $(".sgf__select2");
-		var table = $(".sgf__table");
+		var table = $("#sgf__table");
 
 		var ACOES_CELL = 2;
 		var STATUS_CELL = 3;
 
-		var areaData =  [
-			{ id: 0, text: 'Educação' }, 
-			{ id: 1, text: 'Marketing e Vendas' }, 
-			{ id: 2, text: 'Recursos Humanos e Empreendedorismo' }, 
-			{ id: 3, text: 'Serviços Financeiros e Contabéis' }
-		]
-
-		var openMenu = function(open){			
-			open ? sidebar.removeClass('displayNone') : sidebar.addClass('displayNone');
-		}
-
-		menuOpenItem	
-					.on('click tap', function(){
-						openMenu(true);
-					})
-
-		menuCloseItem
-					.on('click tap', function(){
-						openMenu(false);
-					})
-
-		if(area.length > 0){
-			area.select2({
-				data: ['Educação', 'Marketing e Vendas', 'Recursos Humanos e Empreendedorismo', 'Serviços Financeiros e Contabéis']
-			})
-		}
-
 		if(table.length > 0){
-			/*table.DataTable( {
+			table.DataTable( {
 				"ajax": {
-		            "url": "data/items.json",
+		            "url": "../data/items.json",
 		            "type": "GET",
 		            "srcData": ""
 		        },
+		        "scrollX": true,
 		        "bProcessing": false,
 			    "columns": [
 		            { "data": "area" },
@@ -52,6 +21,9 @@
 		            { "data": "acoes" },
 		            { "data": "status" },		            
 		        ],
+		        "drawCallback": function(){
+		        	$('[data-toggle="tooltip"]').tooltip();
+		        },
 		        "columnDefs": [
 		            
 		            {
@@ -61,9 +33,9 @@
 		                "render": function ( data, type, row ) {
 		                    var link = "";
 		                    if(row.subarea == "" || row.subarea == undefined || row.subarea == null){
-		                    	link = "<a href='cadastroArea.html?areaID=" + row.areaID + "'><i class='fa fa-edit font16px'></i></a>";
+		                    	link = "<a data-toggle='tooltip' data-placement='top' title='Editar Área' href='cadastroArea.html?areaID=" + row.areaID + "' title='Editar Área'><i class='fa fa-edit font16px'></i></a>";
 		                    }else{
-		                    	link = "<a href='cadastroSubarea.html?subAreaID=" + row.subAreaID + "'><i class='fa fa-edit font16px'></i></a>";
+		                    	link = "<a data-toggle='tooltip' data-placement='top' title='Editar Subárea' href='cadastroArea.html?subAreaID=" + row.subAreaID + "' title='Editar subárea'><i class='fa fa-edit font16px'></i></a>";
 		                    }
 		                    return link;
 		                },
@@ -77,9 +49,9 @@
 		                "render": function ( data, type, row ) {
 		                    var link = "";
 		                    if(row.status == "Y"){
-		                    	link = "<span class='bg-success colorBlack padding5px'>Ativo</span>";
+		                    	link = "Ativo";
 		                    }else{
-		                    	link = "<span class='bg-danger colorBlack padding5px'>Inativo</span>";
+		                    	link = "Inativo";
 		                    }
 		                    return link;
 		                },
@@ -98,10 +70,9 @@
 				    }  		      			        
 			    }
 		    });
-		    */
-
-		    
-
+			
 		}
+		
+
 	})
 })(jQuery);

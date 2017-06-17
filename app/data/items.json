@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "area": "Educação",
+      "subarea": "",
+      "acoes": "editar",
+      "status": "Y"      
+    },
+    {
+      "area": "Educação",
+      "subarea": "Educação a distância - Offline",
+      "acoes": "editar",
+      "status": "Y"      
+    },
+    {
+      "area": "Educação",
+      "subarea": "Educação a distância - Internet",
+      "acoes": "editar",
+      "status": "Y"      
+    },
+    {
+      "area": "Educação",
+      "subarea": "Educação Pedagógica",
+      "acoes": "editar",
+      "status": "Y"      
+    },
+    {
+      "area": "Marketing e Vendas",
+      "subarea": "Educação a distância - Internet",
+      "acoes": "editar",
+      "status": "Y"      
+    },
+    {
+      "area": "Marketing e Vendas",
+      "subarea": "Marketing Estratégico",
+      "acoes": "editar",
+      "status": "N"      
+    },
+    {
+      "area": "Recursos Humanos e Empreendedorismo",
+      "subarea": "",
+      "acoes": "editar",
+      "status": "N"      
+    },
+    {
+      "area": "Recursos Humanos e Empreendedorismo",
+      "subarea": "Gestão Trabalhista",
+      "acoes": "editar",
+      "status": "Y"      
+    },
+    {
+      "area": "Recursos Humanos e Empreendedorismo",
+      "subarea": "Serviços Financeiros e Contábeis",
+      "acoes": "editar",
+      "status": "Y"      
+    },
+    {
+      "area": "Serviços Financeiros e Contábeis",
+      "subarea": "",
+      "acoes": "editar",
+      "status": "Y"      
+    },
+    {
+      "area": "Serviços Financeiros e Contábeis",
+      "subarea": "Gestão Econômica / Financeira",
+      "acoes": "editar",
+      "status": "Y"      
+    },
+    {
+      "area": "Serviços Financeiros e Contábeis",
+      "subarea": "Projetos de Viabilidade",
+      "acoes": "editar",
+      "status": "Y"      
+    },
+    {
+      "area": "Serviços Financeiros e Contábeis",
+      "subarea": "Sistemas Contabéis",
+      "acoes": "editar",
+      "status": "Y"      
+    }
+  ]
+}

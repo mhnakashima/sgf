@@ -731,3 +731,19 @@ legend.groupBox {
         }
     }
 }
+
+table, th, td {
+    color: #0f70c4;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #e8e8e8;
+}
+
+table.dataTable thead th, table.dataTable thead td{
+    border: none;
+}

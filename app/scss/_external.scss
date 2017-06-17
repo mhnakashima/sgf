@@ -2,3 +2,37 @@
 *	=External Sources
 */
 
+.dataTables_wrapper{
+	.dataTables_paginate{
+		.paginate_button{
+			
+			min-height: 29px;
+			padding: 0px;
+
+			background-color: transparent;
+			border: none;
+			
+
+			&:hover{
+				background: none;
+				background-color: transparent !important;
+				border: none;     			
+				
+			}
+
+			&:active{
+				background: none;
+				background-color: transparent !important;
+				box-shadow: none;
+			}
+		}
+	} 
+} 
+
+.pagination{
+	>li{
+		>a, >span{
+			margin-left: 0px;
+		}
+	}
+}	

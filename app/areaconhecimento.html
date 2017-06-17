@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/toastr/toastr.min.css" />
 	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/jquery.dataTables.min.css" />
 	<link rel="stylesheet" href="css/jquery-ui.css" />
 	<link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -98,8 +99,8 @@
                 </div>
 
                 <div class="pull-right" > 
-					<a class="btn btn-default btn-sm" href="./areaconhecimento.html">
-        				<i class="fa fa-search"></i> <span class="hidden-xs"> Pesquisar Áreas</span>
+					<a class="btn btn-primary btn-sm" href="./cadastroArea.html">
+        				<i class="fa fa-plus"></i> <span class="hidden-xs"> Cadastrar Área de Conhecimento</span>
         			</a>				  	    
            			
         		</div>
@@ -126,7 +127,7 @@
 		        <div aria-expanded="true" id="collapse2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2">
 		            <ul class="nav list-menu ">
                        <li>
-                        	<a class="list-group-item link-azul-sebrae" target="_self" href="./areaconhecimento.html">
+                        	<a class="list-group-item link-azul-sebrae" target="_self" href="#">
                            		<!--<i class="fa fa-edit fa-lg" ></i>-->
                             	Áreas de Conhecimento
                         	</a>
@@ -240,139 +241,121 @@
     <!-- Body Section --> 
     <div class="sgf_bd container-fluid" >
 
-		<div class="row-fluid sgf__progress">
-			<div class="col-sm-12">
-				
-				<h3 id="lblCompletude_PF" class="text-small text-center font14px marginTop10px marginBottom10px">Completude: <span class="total">13%</span></h3>
 
-				<div class="progress margB0 marginBottom20px">
-			        <div id="progressbar_PF" style="height: 20px; width: 100%" class="ui-progressbar ui-widget ui-widget-content ui-corner-all" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="12.76595744680851"></div>
-			    </div>
-				
-			</div>
-		</div>        
-            
-        <div class="main main-totvs sgf__page">            
+		<div class="main main-totvs sgf__page">			
 			
-		    <div class="row-fluid" id="accordion">
-		    	
-		    	<div class="col-sm-6 col-xs-12">
-		    		
-		    		<div class="sgf__panel">
-		    			
-		    			<div class="panel panel-default">
-					        
-					        <header class="panel-heading">
+		    <div class="row-fluid" id="sgf__tableContainer">
+
+		    	<div class="col-xs-12 col-sm-12">
+					<div class="sgf__panel">
+			    			
+			    			<div class="panel panel-default">
+						        
+						        <header class="panel-heading">
+						            <h4 class="panel-title">
+						               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#sgfareaconhecimento">
+							                <i class="fa fa-search"></i> Pesquisar Área de conhecimento
+							            </a>
+						            </h4>
+						        </header>
+		
+						        <div class="panel-collapse collapse in" id="sgfareaconhecimento">	
+						        	<div class="panel-body portalSGO-card-body-main">
+						        		<div class="row-fluid">
+						        			<form class="sgf__form searchArea form-inline" action="#">
+                                        
+		                                        <div class="form-group col-md-4 col-sm-4 col-xs-12">
+		                                            
+		                                            <label class="width100percent" for="area">Área de Conhecimento</label>
+
+		                                            <select class="sgf__select area form-control width100percent" name="area" id="area">
+		                                                <option value="">--- Selecione uma Área de Conhecimento ---</option>
+		                                                <option value="0">Área 1</option>
+		                                                <option value="1">Área 2</option>
+		                                                <option value="2">Área 3</option>
+		                                                <option value="3">Área 4</option>
+		                                                <option value="4">Área 5</option>
+		                                            </select>
+		                                        </div>
+
+		                                        <div class="form-group col-md-4 col-sm-3 col-xs-12">
+		                                            
+		                                            <label class="width100percent" for="subarea">Sub Área</label>
+
+		                                            <select class="sgf__select subarea form-control width100percent" name="subarea" id="subarea" disabled>
+		                                            	<option value="">--- Selecione uma Subárea de Conhecimento ---</option>
+		                                                <option value="0">Sub Área 1</option>
+		                                                <option value="1">Sub Área 2</option>
+		                                                <option value="2">Sub Área 3</option>
+		                                                <option value="3">Sub Área 4</option>
+		                                                <option value="4">Sub Área 5</option>
+		                                            </select>
+		                                        </div>
+
+
+		                                        <div class="form-group col-md-3 col-sm-3 col-xs-12">
+		                                            
+		                                            <label class="width100percent">Status</label>
+		                                            
+		                                            <label class="radio-inline">
+		                                              <input type="radio" name="inlineRadioOptions sgf__radio" id="inlineRadio1" value="option1"> Ativo
+		                                            </label>
+		                                            <label class="radio-inline">
+		                                              <input type="radio" name="inlineRadioOptions sgf__radio" id="inlineRadio2" value="option2"> Inativo
+		                                            </label>
+
+		                                        </div>
+
+		                                        <div class="col-md-1 col-sm-2 col-xs-12 marginTop10px">
+		                                            <button type="submit" class="btn btn-primary">
+		                                                Pesquisar <i class="fa fa-search"></i>
+		                                            </button>
+		                                        </div>
+
+		                                    </form>
+						        		</div>
+						        	</div> 		
+								</div>
+						    </div>
+
+			    	</div>
+				</div>		    	
+
+				<div class="col-xs-12 col-sm-12">
+					<div class="sgf__panel">
+
+						<div class="panel panel-default">
+							
+							 <header class="panel-heading">
 					            <h4 class="panel-title">
-					               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#sgfareaconhecimento">
-						                Área de Conhecimento
+					               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#sgfResultArea">
+						                Resultados - Área de Conhecimento
 						            </a>
 					            </h4>
 					        </header>
-	
-					        <div class="panel-collapse collapse in" id="sgfareaconhecimento">	
-					        	<div class="panel-body portalSGO-card-body-main">
-					        		<div class="row-fluid">
-					        			<form class="sgf__formArea" action="#">
-					        				
-					        				<div class="col-sm-12 col-xs-12">
-					        					<div class="form-group">
-					        						<label class="control-label required" for="CodArea">Área de Conhecimento</label>
-					        				
-					        						<input class="form-control" id="CodArea" maxlength="120" name="CodArea" type="text" value="" placeholder="Exemplo: (Marketing)">
-					        					</div>
-					        				</div>
+							
+							<div class="panel-collapse collapse in" id="sgfResultArea">	
+								<div class="padding15px">
 
-					        				<div class="col-sm-12 col-xs-12">
-					        					<div class="form-group">
-					        						<label class="control-label required" for="CodAreaAtivo">Ativo</label>
-					        						
-					        						<div class="checkbox noMargin">
-													  <label>
-													    <input type="checkbox" name="optionCheckAtivo" id="optionCheckAtivo" value="" >													    
-													  </label>
-													</div>
-					        						
-					        					</div>
-					        				</div>
-
-					        				<div class="col-sm-12 col-xs-12 alignRight">
-					        					<button type="button" id="sgf__btnSalvarArea" class="btn btn-sm btn-primary">
-					        						<i class="fa fa-plus"></i>&nbsp;&nbsp;Adicionar
-					        					</button>
-					        				</div>
-											
-
-					        			</form>
-					        		</div>
-					        	</div> 		
-							</div>
-					    </div>
-
-		    		</div>
-
-		    	</div>
-
-		    	<div class="col-sm-6 col-xs-12">
-	  
-		    		<div class="sgf__panel">
-		    			<div class="panel panel-default">
-		    		        
-		    		        <header class="panel-heading">
-		    		            <h4 class="panel-title">
-		    		               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#sgfsubarea">
-						                Subárea de Conhecimento
-						            </a>
-		    		            </h4>
-		    		        </header>
-		    				
-		    				<div class="panel-collapse collapse in" id="sgfsubarea">	
-			    		        <div class="panel-body portalSGO-card-body-main">			
-			    		        	<form class="sgf__formArea" action="#">
-						        		
-										<div class="col-sm-12 col-xs-12">
-				        					<div class="form-group">
-				        						<label class="control-label required" for="CodSubArea">Área de Conhecimento</label>
-				        				
-				        						<input class="form-control" id="CodSubArea" maxlength="120" name="CodSubArea" type="text" value="" placeholder="Exemplo: (Marketing)">
-				        					</div>
-				        				</div>
-
-				        				<div class="col-sm-12 col-xs-12">
-				        					<div class="form-group">
-				        						<label class="control-label required" for="CodSubArea">Subárea</label>
-				        				
-				        						<input class="form-control" id="CodSubArea" maxlength="120" name="CodSubArea" type="text" value="" placeholder="Exemplo: (Análise de Conteúdo)">
-				        					</div>
-				        				</div>
-
-				        				<div class="col-sm-12 col-xs-12">
-				        					<div class="form-group">
-				        						<label class="control-label required" for="CodAreaAtivo">Ativo</label>
-				        						
-				        						<div class="checkbox noMargin">
-												  <label>
-												    <input type="checkbox" name="optionSubAreaAtivo" id="optionSubAreaAtivo" value="true" />	
-												  </label>
-												</div>
-				        						
-				        					</div>
-				        				</div>
-
-				        				<div class="col-sm-12 col-xs-12 alignRight">
-				        					<button type="button" id="sgf__btnSalvarArea" class="btn btn-sm btn-primary">
-				        						<i class="fa fa-plus"></i>&nbsp;&nbsp;Adicionar
-				        					</button>
-				        				</div>
-										
-
-				        			</form>		
-			    				</div>
-		    				</div>
-		    		    </div>
-		    		
-		    		</div>
-		    	</div>
+									<div class="sgf__tableWrapper">
+										<table id="sgf__table" class="sgf__table table table-striped responsive width100percent">
+							                <thead>
+						                        <tr>
+						                            <th>Área</th>
+						                            <th>Sub Área</th>
+						                            <th>Ações</th>
+						                            <th>Status</th>                 
+						                        </tr>
+						                    </thead>  
+						                    
+						                </table>
+									</div>
+								</div>
+			                </div>
+		                </div>
+	                </div>
+				</div>
+		    	
 		    </div>
         	
     	</div>
@@ -389,11 +372,14 @@
     </footer>
     <!-- End Footer Section -->
 
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>	
-	<script type="text/javascript" src="js/sidebar.js"></script>
-	<script type="text/javascript" src="js/sgf_progressBar.js"></script>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-ui.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.js"></script>
+	<script type="text/javascript" src="./js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="./js/dataTables.bootstrap.min.js"></script>	
+	<script type="text/javascript" src="./js/sidebar.js"></script>
+	<script type="text/javascript" src="./js/sgf_datatable.js"></script>
+	<script type="text/javascript" src="./js/sgf_search.js"></script>
 
 </body>
 </html>

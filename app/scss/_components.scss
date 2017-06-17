@@ -381,7 +381,7 @@
 }
 
 .portalSGO-card-body-main {
-    padding: 15px 0px;
+    padding: 15px;
 }
 
 .portalSGO-card-body-main-mobile {
@@ -946,6 +946,80 @@
   }
    
 }
+
+
+.sgf__table{
+  
+  border: none !important;
+
+  thead{
+    tr{
+      th{
+        font-size: 1.2rem;
+        border: none;
+      }
+    }
+  }
+
+  tbody{
+    tr{
+      td{
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  @media #{$smartphone}{
+    min-width: 570px;
+  }
+}
+
+.dataTables_length, .dataTables_filter{
+
+
+  @media #{$smartphone}{
+    
+    width: 100%;
+    
+    label, select, input{
+      
+      display: block;
+
+      width: 100%;
+
+      margin: 0px;
+
+      text-align: left;
+    }
+
+    label{
+      input{
+        margin: 0px;
+      }
+    }
+  }
+}
+
+.dataTables_wrapper{
+  .dataTables_filter{
+    @media #{$smartphone}{
+      input{
+        margin: 0px;
+
+        text-align: left;
+      }
+    }
+  }
+} 
+
+.sgf__tableWrapper{
+   // overflow-x: scroll;
+}
+
+.dataTables_info{
+  display: none;
+}
+
 
 /*
   =Components
